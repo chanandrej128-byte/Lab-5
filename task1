@@ -1,0 +1,12 @@
+import re
+with open("task1-en.txt",'r',encoding='utf-8') as f:
+    text=f.read()
+
+task1=r"(рис\.\s*\d+|Fig\.\s*\d+)"
+task2=r'\b[A-Za-z]{4}\b'
+a=re.findall(task1,text)
+b=re.findall(task2,text)
+for i in a:
+    print(i)
+for i in b:
+    print(i)
