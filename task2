@@ -1,0 +1,12 @@
+import re
+with open("task2.html",'r',encoding='utf-8')as f:
+    text=f.read()
+a = r'font-style:\s*([a-zA-Z-]+)'
+b = r'font-size:\s*(\d+)\s*px'
+
+result1=re.findall(a,text)
+result2=re.findall(b,text)
+for i in result1:
+    print(i)
+for i in result2:
+    print(i)
